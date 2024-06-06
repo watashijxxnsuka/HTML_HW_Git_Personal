@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상품주문서</title>
+  <style>
+    fieldset{
+      margin-bottom: 20px;
+      width: 500px;
+    }
+    legend {
+      color: blueviolet;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>상품 주문서</h1>
+    <form action="/orders/neworders">
+      <fieldset>
+        <legend><b>개인 정보</b></legend>
+        <ul>
+            <label for="name"><b>이름</b></label>
+            <input type="text" id="name">
+        </ul>
+        <ul>
+            <label for="tel"><b>연락처</b></label>
+            <input type="tel" id="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}">
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend><b>배송지 정보</b></legend>
+        <ul>
+          <label for="address"><b>주소</b></label>
+          <input type="text" id="address">
+      </ul>
+      <ul>
+          <label for="tel2"><b>전화번호</b></label>
+          <input type="tel" id="tel2" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}">
+          
+      </ul>
+      <ul>
+        <label for="ship-memo" id="label-title"><b>메모</b>
+          <textarea cols="50" rows="5" ></textarea>
+      </label>
+      </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend><b>주문 정보</b></legend>
+        <ul>
+          <input type="checkbox">
+          <label for="">과테말라 안티구아 (100g)</label>
+          <input type="number" value="0">개
+        </ul>
+        <ul>
+          <input type="checkbox">
+          <label for="">인도네시아 만델링 (100g)</label>
+          <input type="number" value="0">개
+        </ul>
+        <ul>
+          <input type="checkbox">
+          <label for="">탐라는도다(블렌딩) (100g)</label>
+          <input type="number" value="0">개
+        </ul>
+      </fieldset>
+
+      <div style="text-align: center;">
+      <input type="submit" value="주문하기">
+      <input type="reset" value="다시 작성">
+      </div>
+      
+    </form>
+  </div>
+</body>
+</html>
